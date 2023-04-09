@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Operator Augmented Assignment</title>
+</head>
+<body>
+<script>
+  /*
+  operator augmented assignment adalah operator terhadap dirinya sendiri
+  contoh :
+  result = result + 1; -> result += 1;
+  result = result - 1; -> result -= 1;
+  result = result * 2; -> result *= 2;
+  result = result ** 10; -> result **= 10;
+  result = result / 2; -> result /= 2;
+  result = result % 2; -> result %= 2;
+   */
+
+  let result = 1;
+  result += 3; //4
+  document.writeln("<p>" + result + "</p>")
+  result -= 2; //2
+  document.writeln("<p>" + result + "</p>")
+  result *= 5; //10
+  document.writeln("<p>" + result + "</p>")
+  result **=2; //100
+  document.writeln("<p>" + result + "</p>")
+  result /= 2; //50
+  document.writeln("<p>" + result + "</p>")
+  result %= 2 //0
+  document.writeln("<p>" + result + "</p>")
+</script>
+</body>
+</html>

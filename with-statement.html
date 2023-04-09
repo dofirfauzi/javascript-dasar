@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>With Statement</title>
+</head>
+<body>
+<script>
+  const mahasiswa = {
+    firstName:"Dofir",
+    lastName:"Fauzi",
+    age:29,
+    address:"Bogor"
+  }
+
+  //tanpa with statement
+  console.log(mahasiswa.firstName)
+  console.log(mahasiswa.lastName)
+  console.log(mahasiswa.age)
+  console.log(mahasiswa.address)
+
+  //dengan with statement
+  with (mahasiswa){
+    console.log(firstName)
+    console.log(lastName)
+    console.log(age)
+    console.log(address)
+  }
+
+/*
+with statement tidak dirokemendasikan untuk digunakan
+ */
+</script>
+</body>
+</html>

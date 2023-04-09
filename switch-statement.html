@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Switch Statement</title>
+</head>
+<body>
+<script>
+  /*
+  1. Swithc adalah statement percabanagan yang sama dengan if, namun lebih  sederhana cara pembuatannya
+  2. switch statement hanya digunakan untuk perbandingan ==
+   */
+
+  const nilai = "C";
+  switch (nilai){
+    case "A":
+      document.writeln("<p>Anda Lulus Dengan Baik</P>");
+      break;
+    case "B":
+    case "C":
+      document.writeln("<p>Anda Lulus</P>");
+      break;
+    case "D":
+      document.writeln("<p>Anda Tidak Lulus</P>");
+      break;
+    default:
+      document.writeln("<p>Mungkin Anda salah jurusan</P>");
+
+  }
+</script>
+</body>
+</html>

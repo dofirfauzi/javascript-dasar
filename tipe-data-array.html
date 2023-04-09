@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tipe Data Array</title>
+</head>
+<body>
+<script>
+  /*
+  1. Array adalah tipe data yang berisikan kumpulan data
+  2. Array di javascript itu dinamis, panjangnya bia berubah, kita bisa menamah isinya
+     berbeda di bahasa pemerograman lain, panjang array itu sudh ditentukan di awal
+   */
+
+  let arrayKosong = [];
+  let arrayNama = ["Dofir fauzi","Eko Satria" , "Budi Doremi", 25, true , 26]
+
+  /*
+  1. Setiap dta di array akan disimpan secara berurutan, urutan pertama dimulai dari index ke 0
+  2. setiap kita menambah data ke array, maka akn disimpan di urutan paling terakhir
+  3. untuk menambah data ke arrah gunakan .push(value)
+   */
+
+  const names = [];
+  names.push("Dofir Fauzi");
+  names.push("Budi Doremi");
+  names.push("Anjas Maharadika");
+  names.push("Dwisasono");
+  names.push("adi kurnia", "diki", "fauzan azima")
+
+  console.table(names);
+
+  /*
+  Operasi di array
+
+  1. array.push(value) -> Menambah data ke array
+  2. array.length -> untuk mendapatkan panjang array
+  3. array[index] -> untuk mendapatkan data di posisi index
+  4. array[index] = value -> mengubah data di posisi index
+  5. delete array[index] -> menghapus data di posisi index, namun index tidak bergeser
+   */
+
+  console.info(names[4])
+
+  names[4] = "dias wikrama"
+  console.info(names[4])
+
+  delete names[4];
+  console.table(names);
+
+  names[4] = "adi kurnia";
+  console.table(names);
+</script>
+</body>
+</html>

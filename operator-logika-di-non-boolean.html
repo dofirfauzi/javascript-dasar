@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Operator Logika di Non Boolean</title>
+</head>
+<body>
+<script>
+  /*
+  1. operator logika di java script tidak hanya bisa digunakan pada data boolean saja tapi bisa dijuga di data non boolean
+  2. operator logika || - &&
+
+  3. operator logika || dibaca dari kinri ke kanan, jadi yg diambil yg true duluan,
+  4. kalo keduanya false maka nilai yg diambil yg paling terakhir
+   */
+
+  console.info("" || "1") //yg tampil string 1 karena sting kosong dianggap false
+  console.info("0" || null) //yg tampil sting 0 karena string 0 dianggap true
+  console.info(0 || false) //yag tampil false, karena dua dua nya nilainya false jdi yg diambil yg terakhir
+
+  const mahasiswa = {
+    firstName: "",
+    lastName: "Fauzi"
+  }
+
+  const name = mahasiswa.firstName || mahasiswa.lastName; //yg diambil lastname karena firstname nya string kosong dianggap false
+  console.info(name);
+
+  /*
+  operator logika &&
+  1. dibaca dari kiri ke kanan
+  2. akan mengambil data pertama yg falsy
+  3. jika tidak ada satupun yang false artinya true semua maka yg diambil yg terakhir
+   */
+
+  console.info("" && "1")//yang tampil string kosong, karena dia falsy yg pertama
+  console.info(1 && null) //yg diambil yg null karena satu true
+  console.info("1" && 2) // yg diambil 2 karena tidak ada yg false jdi diambil yg paling terakhir
+</script>
+</body>
+</html>

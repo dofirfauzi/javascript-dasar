@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Operator Nullish Coalescing</title>
+</head>
+<body>
+<script>
+  /*
+  1. Nullish value adalah null atau undefined
+  2. Nullish coalescing operator (??) adalah operator mirip dengan ternary operator namun yang membedakan
+  adalah kondisinya, jika bernilai null atau undefined baru value nya dapat diambil
+   */
+
+  let parameter ; //undefined
+  // jika parameter nya null atau undefined ubah datanya jadi nilai default
+  let data = parameter ?? "Nilai default";
+
+  document.writeln(data)
+</script>
+</body>
+</html>

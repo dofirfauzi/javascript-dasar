@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kata Kunci This</title>
+</head>
+<body>
+<script>
+  /*
+  1. kata kunci this adalah referensi ke object milik siapa
+  2. tiap lokasi kata kunci this, berbeda beda referensi pemiliknya
+  3. dalam object method, this merupakan referensi ke object pemilik functionnya
+  4. di global scope, this merupakan referensi ke global object (di browser biasanya windows)
+   */
+
+  console.log(this)//thismengacu ke global scope
+
+  function helloWordl(){
+    console.log(this)//this di dalam function mengacu ke global scope juga
+  }
+
+  const mahasiswa = {
+    name : "Dofir Fuazi",
+    salamKenal : function (name){
+      console.log(this)// this disini mengacu ke object pemilik functionnya yaitu mahasiswa
+      console.log(`Halo ${this.name} salam kenal nama saya ${name}`)
+    }
+  }
+
+  mahasiswa.salamKenal("Budi")
+</script>
+</body>
+</html>

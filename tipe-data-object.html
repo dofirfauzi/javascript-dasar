@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tipe Data Object</title>
+</head>
+<body>
+<script>
+  /*
+  1. Tipe data object mirip dengan tipe data aray
+  2. yang membedakan adalah, di object indexnya bisa berupa string
+  3. index di object biasanya disebut attributs atau propertis
+   */
+
+  const orang = {}; //buat object kosong
+  orang["nama"] = "Dofir Fauzi"; //tambah data ke object
+  orang["alamat"] = "Bogor";
+  orang.umur = 29;
+
+  console.table(orang);
+
+  delete orang["umur"]; // delet data di object
+  console.table(orang);
+
+  //buat object lngsng diisiattribut dan value nya
+  const mahasiswa = {
+    nama : 'Dofir fauzi',
+    'alamat rumah' : 'perum primrose', //klo di attributnya ada spasi hrus pake kutif
+    usia : 29
+  }
+
+  console.table(mahasiswa);
+
+  //untuk akses value attribut atau properti
+  console.info(mahasiswa.nama)
+</script>
+</body>
+</html>

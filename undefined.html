@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Undefined</title>
+</head>
+<body>
+<script>
+    /*
+    1. undefined adalah sebuah kata kunci dijavascript
+    2. undefined adalah tipe data
+    3. variable yg belum ditambahkan nilai maka tipe data nya menjadi undefined
+    4. jika kita mengakses data di array yg indexnya tidak ada maka dia akan menjadi undifined jga
+    5.begtupun dengan object jika kita mengkses data attribut yg tidak ada maka akan menjadi undifined
+     */
+
+    let name ;
+    if(name === undefined){
+        alert("nama undefined");
+    }else {
+        alert(name);
+    };
+
+    const orang = ["Dofir Fauzi", "Dika Wijaya"];
+    console.info(orang[2]) // undifines
+
+    const mahasiswa = {
+        nama : "Dofri Fauzi",
+        umur : ""
+    }
+
+    console.info(mahasiswa.alamat)//undefine
+    console.info(mahasiswa.umur)//string kosong
+</script>
+</body>
+</html>

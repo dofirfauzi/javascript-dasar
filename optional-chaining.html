@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Optional Chaining</title>
+</head>
+<body>
+<script>
+  /*
+  1. jika kita mengakses property dari data nullish atau undefined dr sebuah object, itu akan terjadi error
+  2. untuk mengamankannya bisa menggunakan optional chaining (?)
+   */
+
+  const mahasiswa = {};
+  //const country = mahasiswa.address.country // ini akan error karena kita mengakses property dr data undefined
+
+  //untuk mengamankannya bisa menggunakan optional chaining yaitu dengan menambahkan (?)
+
+  const country = mahasiswa?.address?.country;
+
+  document.writeln(country);
+
+</script>
+</body>
+</html>

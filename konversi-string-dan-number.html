@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Konversi String Dan Number</title>
+</head>
+<body>
+<script>
+  /*
+  Konversi string dan number
+
+  1. parseInt(string) -> Mengkonversi dari string ke number (bilangan bulat)
+  2. parseFloat(string) -> Mengkonversi dari string ke number (bilangan pecahan)
+  3. Number(string) -> Mengkonversi dari string ke number (bilangan bulat atau pecahan)
+  4. number.toString() -> Mengkonversi number ke sting
+   */
+
+  document.writeln("<p>" + parseInt("1.9") +"</p>")// 1
+  document.writeln("<p>" + parseFloat("1.9") +"</p>")// 1.9
+  document.writeln("<p>" + Number("1.5") +"</p>")// 1.5
+
+  //konversi dari number ke string
+  const nilai = 75;
+  const nilaiString = nilai.toString()
+  document.writeln("<p>" + nilaiString +"</p>")// 1.5
+
+  /*
+  Nan (not a number)
+  1. jika data string yang kita konversi tidak valid maka hasilnya akan menjadi Nan
+  2. Nan adalah number spesial yang menyebutkan bahwa ini bukan number
+   */
+
+  document.writeln("<p>" + parseInt("1.9salah") +"</p>")// 1
+  document.writeln("<p>" + parseFloat("1.9dofir") +"</p>")// 1.9
+  document.writeln("<p>" + Number("1.5salah") +"</p>")// Nan
+
+  /*
+   jika Nan dioperasikan dengan data number yang lain maka hasilnya akan mejadi Nan juga
+   */
+
+  const value1 = Number("1salah"); //Nan
+  const value2 = 1; //Number
+
+  totalValue = value1 + value2; //Nan
+  document.writeln("<p>" + totalValue +"</p>")// Nan
+
+  /*
+  Untuk cek apakah sebuah value itu Nan atau bukan kita bisa menggunakan fungsi isNan()
+  */
+
+  document.writeln("<p>" + isNaN(value1) +"</p>")// True karena value 1 adalah nan
+  document.writeln("<p>" + isNaN(value2) +"</p>")// false karena value 1 adalah number bukan nan
+</script>
+</body>
+</html>

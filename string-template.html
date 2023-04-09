@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sting Template</title>
+</head>
+<body>
+<script>
+  /*
+  javascript memiliki fitur sting template, dimana kita bisa mesubtitusi data dari luar string ke dalam string,
+  seperti mengambil data variable atau bahkan melakukan operasi matematika
+
+  string template juga support untuk multiline
+
+  untuk menggunakan string template, cukup gunakan ~ (backtick) diawal dan diakhir, berbeda dengan string biasa yang menggunakan petik satu atau dua.
+
+   */
+
+  const fullName = "Dofir Fauzi";
+  const template = `Nama : ${fullName}`;
+  console.info(template);
+
+  const nilai = 90;
+  const hasilUjian = `Nama : ${fullName} Lulus Ujian : ${nilai > 75}`;
+  console.info(hasilUjian);
+</script>
+</body>
+</html>

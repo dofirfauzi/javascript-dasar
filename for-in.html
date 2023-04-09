@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For In</title>
+</head>
+<body>
+<script>
+  /*
+  for in digunakan untuk melakukan perulangan property pada object atau index pada array;
+  for in tidak disarankan untuk digunakan pada array
+   */
+
+  const mahasiswa = {
+    firstName: "Dofir",
+    lastName: "Fauzi",
+    age : 29,
+    address : "Bogor"
+  }
+
+  for (const property in mahasiswa){
+    console.info(`${property} : ${mahasiswa[property]}`)
+  }
+</script>
+</body>
+</html>

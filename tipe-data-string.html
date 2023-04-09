@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tipe Data String</title>
+</head>
+<body>
+<script>
+  /*
+  tipe data sting
+  untuk membuat string bisa menggunakan "(petik dua) atau '(petik satu) diawal dan diakhir kalimat
+   */
+
+  document.writeln("Dofir Fauzi"); //menggunakan petik dua
+  document.writeln("<br>");
+  document.writeln('string dengan petik satu') //menggunakan petik satu
+  document.writeln("<br>");
+
+  /*
+  kita juga bisa menggabungkan string dengan menggunakan operator +
+   */
+
+  document.writeln("nama : " + "Dofir Fauzi")
+  document.writeln("<br>");
+
+  /*
+  ESCAPE SEQUENCE
+  javascript mendukung escape squence di string,
+  escape swquence merupakan karakter khusus seperti ENTER, TAB, "(Kutip Dua) dll.
+  berikut contoh escape sequence yang didukung oleh javascript
+
+  \n -> ENTER
+  \t -> TAB
+  \' -> '
+  \" -> "
+  \\ -> \
+   */
+
+  document.writeln("<textarea cols='100' rows='10'>");
+  document.write("Dofir Fauzi\n")
+  document.write("\\Sedang\\Belajar\n")
+  document.write("\"Java Script Dasar\"\n")
+  document.write('Dari Channel youtube \'Programmer Zaman Now\'')
+  document.writeln("</textarea>");
+
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Variable</title>
+</head>
+<body>
+<script>
+  /*
+  1. Variable adalah tempat untuk menyimpan data
+  2. dengan menyimpan data di variable kita bisa menggunakannya lagi dengan menyebutkan nama variablenya
+  3. untuk membuat variable kita bisa menggunakan kata kunci var lalu diikuti dengan nama variablenya, namun setelah thn 2015 kta kunci var diganti dengan let dan const
+  4. javascript adalah dynamic language, artinya variable dijavascript tipe datanya bisa berubah rubah, tidak terpaku hanya satu tipe data saja
+  5. untuk membuat nama variable, programer javascript biasanya menggunakan camelCase
+   */
+
+  let firstName;
+  let lastName;
+  let fulName;
+
+  //setelah variable di deklarasikan kita bisa asign value kedalamnya dengan menggunakan nama variable lalu = siikuti valuenya
+
+  firstName = "Dofir";
+  lastName = "Fauzi";
+  fulName = firstName + " " + lastName;
+
+  //kita juga bisa membuat variable dan langsung mengisi valu nya
+
+  var channelYoutube = "Dofir Fauzi";
+
+  //untuk mengakses atau mengunakan variable cukup sebutkan namanya saja
+
+  document.writeln(firstName);
+  document.writeln(lastName);
+  document.writeln(fulName);
+  document.writeln(channelYoutube);
+
+  //jika membuat variable dengan kata kunci const maka, variable tersebut tidak dapat diubah nilainya, ini disebutjuga sbgai constant di bahasa lain
+
+  const application = "belajar javascript";
+  application = "gak mau belajar" // error
+
+</script>
+</body>
+</html>

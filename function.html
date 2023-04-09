@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function</title>
+</head>
+<body>
+<script>
+  /*
+  untuk membuat nama function gunakan cammleCase
+   */
+  function sayHelloWord() {
+    document.writeln(`<p>Hello World</p>`)
+  }
+
+  sayHelloWord()
+
+  /*
+  FUNCTION PARAMETER
+  1. kita bisa mengirim data ke function yang kita panggil
+  2. untuk melakukan hal tersebut kita harus menambahkan parameter pada function yg kita buat
+  3. parameter ditempatkan didalam ()
+  4. parameter bisa lebih dari satu, jika lebih dari satu harus dipisahkan dengan tanda koma
+   */
+
+  function sayHello(firstName,lastName){
+    document.writeln(`<p>Hello ${firstName} ${lastName} </p>`)
+  }
+
+  sayHello("Dofir","Fauzi");
+
+  /*
+  FUNCTION RETURN VALUE
+  1. secara default function tidak mengembalikan value, namun jika kita ingin kita bisa membuatnya
+  2. untuk mengembalikan value kita bisa gunakan kata kunci return di dalam block kode nya, diikuti dengan data yg ingin dikembalikan
+  3. function hanya bisa meruturn 1 data, jika data yg ingin kita kembalikan lebih dari satu maka kita bisa menggunakan array sebagai data yg ingin kita kembalikan
+  4. saat kita menggunakan kata kunci return, maka kode setelahnya tidak akan dieksekusi lagi.
+   */
+
+  function sayHello2(firstName,lastName){
+    return `Hello ${firstName} ${lastName}`;
+  }
+
+  const say = sayHello2("andika","pratama")
+  document.writeln(say)
+
+  /*
+  OPTIONAL PARAMETER
+  1. di javascript secara default parameter di function itu optional
+  2. artinya kita tidak wajib mengisi valuenya ketika memanggil function
+  3.jika kita tidak isi value parameternya maka secara otomatis nilai nya menjadi undefined
+   */
+
+  /*
+  DEFAULT PARAMETER
+  1. parameter bisa kita beri default valuenya,
+  2. sehingga jika kita tidak mengirimkan value di parameternya, maka nilainya tidak akan menjadi undefined
+   */
+
+  function register(name, gender = "UNKNOWN"){
+    console.log(name)
+    console.log(gender)
+  }
+
+  register("Dofir Fauzi")
+
+  /*
+  REST PARAMETER
+  1. Rest parameter adalah fitur dimana kita bisa mengirim sebanyak2 data ke dalam 1 parmeter
+  2. rest parameter hanya boleh ada 1 di satu function
+  3. rest parameter hanya boleh ada di posisi paling terakhir
+   */
+
+  function sum(name, ...data){
+      let total = 0
+      for (const item of data){
+          total += item
+      }
+      document.writeln(`<p>Total ${name} : ${total}</p>`)
+  }
+
+  sum("apple", 1 , 2, 3, 4)
+
+  /*
+  Spread Syntax
+  spread syntax digunakan untuk mengirim data array ke rest parameter.
+  untuk menggunakan spread syntax cukup tambahkan ...
+   */
+
+  const values = [10,10,10,10,10]
+  sum("orange", ...values)
+
+  /*
+  FNGCTION SEBAGAI VALUE
+   */
+
+  function sayHello3(name){
+      document.writeln(`<p>Hallo ${name}</p>`)
+  }
+
+  const sayHelloTo = sayHello3 // function dijadikan value dari variable sayHelloTo
+
+  //untuk menjalankan functionnya kita bisa panggil nama variablenya sprtidbwh ini
+  sayHelloTo("Dofir Fauzi")
+
+  /*
+  FUNCTION DI PARAMETER
+   */
+
+  function giveMeName(callback){
+      callback("Sandika")
+  }
+
+  giveMeName(sayHelloTo)
+
+  /*
+  ANONYMOUS FUNCTION
+  1. anonymous function adalah function tanpa nama
+   */
+
+  const sayHelloPlease = function (name){
+      document.writeln(`<p>Hallo ${name} from anonymouse function </p>`)
+  }
+
+  sayHelloPlease("Dofir Fauzi")
+
+  /*
+  FUNCTION DALAM FUNCTION
+  1. kita bisa membuat function di dalam function
+  2. function yang ada di dalam function disebut inner function
+  3. inner function hanya bisa dipanggil di tempat dimana dia dibuat, tidak bisa dipanggil diluar tempat dia dibuat
+   */
+
+  function outer(){
+      function inner(){
+          console.log("inner function")
+      }
+
+      inner()
+  }
+
+  // inner()//error tidak bisa diakses disini
+
+  /*
+  RECURSIVE FUNCTION
+  1. kemampuan function memanggil fuction dirina sendiri
+   */
+
+  function factorialRecursive(value){
+      if(value === 1) {
+          return 1
+      }else {
+          return value * factorialRecursive(value-1)
+      }
+  }
+
+  console.log(factorialRecursive(5))
+  console.log(5 * 4 * 3 * 2 * 1);
+
+  /*
+  FUNCTION GENERATOR
+  1. function untuk membuat data generator atau data itterable, artinya functionnya mereturn banayak data
+  2. data generator atau itterable mirip seperti array tapi bukan array
+   */
+
+  function* buatGanjil(value){
+      for (let i = 0; i <= value; i++) {
+          if (i % 2 === 1){
+              yield i
+          }
+      }
+  }
+  
+  const angkaGanjil = buatGanjil(10)
+  for (const number of angkaGanjil) {
+      console.info(number)
+  }
+
+  /*
+  ARROW FUNCTION
+  1. arrow function adalah alternatif pembuatan function yang lebih sederhana dibanding function biasanya
+  2. disebut arrow function karena pembuatannya menggunakan tanda => seperti panah
+  3. namun arrow functon memiliki banyak keterbatasan
+    -> tidak memiliki fitur argument object
+    -> tidak bisa menggunakan function generator
+    -> tidak bisa mengakses this
+    -> tidak bisa mengakses super
+   */
+
+  const helloArrowFunction = (name) => {
+      const say = `Hello ${name} from arrow function`
+      console.log(say)
+  }
+
+  helloArrowFunction("Dofir Fauzi")
+
+  // arrow function tanpa block
+  // jika isinya hanya satu baris maka kita bisa membuat arrow function tanpa block
+
+  const helloArrowFunction2 = (name) => console.log(name)
+
+  helloArrowFunction2("Sandika")
+
+  //arrow function return value
+  //jika menggunakan block hrus menggunakan kata kunci return
+  //jika tanpa blok tidak perlu menggunakan kata kunci return
+
+  const sum2 = (first,second) => first + second
+  console.log(sum2(1,2))
+
+
+  //arrow function tanpa kurung parameter
+  const sayHello4 = name => console.info(`Hello ${name} from arrow function tanpa kurung parameter`)
+  sayHello4("test")
+
+  /*
+  ARROW FUNCTION DI OBJECT
+  1. kita bisa membuat object method mengunakan arrow function
+  2. namu perlu diketahui arrow function tidak bisa digunakan untuk mengakses argument object, function generator, kata kunci this dan super
+   */
+
+  const mahasiswa = {
+      name : "Dofir Fuazi",
+      salamKenal : (name) => {
+          console.log(`Halo salam kenal nama saya ${name}`)
+      }
+  }
+mahasiswa.salamKenal("Budi")
+</script>
+</body>
+</html>

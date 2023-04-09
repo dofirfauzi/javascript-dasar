@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Operator In</title>
+</head>
+<body>
+<script>
+  /*
+  1. In operator adalah operator untuk mengecek apakah sebuah properti ada atau tidak di dalam object
+  2. jika ada maka hasilnya true
+  3. tidak hnya di onbject in juga bisa digunakan untuk cek index di array
+   */
+
+  const mahasiswa = {
+    firstName : "Dofir",
+    lastName : "Fauzi"
+  }
+
+  const result = "umur" in mahasiswa;
+  document.writeln(`<p>  ${result} </p>`);
+
+  const orang = ["Dofir Fauzi", "Dika Vijayana"]
+  const dika = "1" in orang;
+  document.writeln(`<p>  ${dika} </p>`);
+  /*
+  Peringatan
+  1. In operator hanya mengecek apakah property atau index ada atau tidak,
+  2. jadi walaupun nilai property atau index nya null / undefine, maka tetap dianggal ada
+   */
+
+  orang[0] = null
+  const check = "0" in orang;
+  document.writeln(`<p>  ${check} </p>`);
+
+</script>
+</body>
+</html>
